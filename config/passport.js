@@ -37,7 +37,7 @@ passport.use(
 // Google Strategy
 passport.use(
   new GoogleStrategy({
-    callbackURL:'http://localhost:3000/auth/google/redirect',
+    callbackURL:'https://blogcorner.herokuapp.com/auth/google/redirect',
     clientID:process.env.G_CLIENT_ID,
     clientSecret:process.env.G_CLIENT_SECRET,
     profileFields:['id', 'name', 'email']
@@ -83,7 +83,7 @@ passport.use(
 passport.use(
   new FacebookStrategy(
     {
-      callbackURL:`http://localhost:3000/auth/facebook/redirect`,
+      callbackURL:`https://blogcorner.herokuapp.com/auth/facebook/redirect`,
       clientID:process.env.FB_CLIENT_ID,
       clientSecret:process.env.FB_CLIENT_SECRET,
       profileFields:['id', 'displayName', 'name', 'email', 'photos']
